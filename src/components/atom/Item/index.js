@@ -14,7 +14,7 @@ const Item = ({setIsTambah, setIsUpdate, getData, setId, ...mhs }) => {
                 {
                     label: 'Ya',
                     onClick: () => {
-                        axios.delete(`http://localhost:4000/mhs/${mhs._id}`)
+                        axios.delete(`https://mern-mhs-api-badruti94.vercel.app/mhs/${mhs._id}`)
                         .then(data=>{
                             getData()
                         })
@@ -39,7 +39,7 @@ const Item = ({setIsTambah, setIsUpdate, getData, setId, ...mhs }) => {
     return (
         <div className="item-wrapper" >
             <div className="img-wrapper" >
-                <img className="img" src={`http://localhost:4000/public/assets/images/${mhs.foto}`} alt="pp" />
+                <img className="img" src={`https://mern-mhs-api-badruti94.vercel.app/public/assets/images/${mhs.foto}`} alt="pp" />
             </div>
             <div className="info-wrapper" >
                 <div>

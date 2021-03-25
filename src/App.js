@@ -10,7 +10,7 @@ function App() {
   const [mhss, setMhss] = useState([])
 
   const getData = async () => {
-    const data = await axios.get('http://localhost:4000/mhs')
+    const data = await axios.get('https://mern-mhs-api-badruti94.vercel.app/mhs')
     console.log(data);
     setMhss(data.data)
   }

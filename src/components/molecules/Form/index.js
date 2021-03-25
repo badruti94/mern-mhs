@@ -17,7 +17,7 @@ const Form = ({ update, setIsTambah, setIsUpdate, id, getData, ...rest }) => {
         data.append('foto', foto)
 
         if (!update) {
-            axios.post(`http://localhost:4000/mhs`, data, {
+            axios.post(`https://mern-mhs-api-badruti94.vercel.app/mhs`, data, {
                 headers: {
                     'content-type': 'multipart/form-data'
                 }
@@ -28,7 +28,7 @@ const Form = ({ update, setIsTambah, setIsUpdate, id, getData, ...rest }) => {
                 })
                 .catch(err => { console.log(err); })
         } else {
-            axios.put(`http://localhost:4000/mhs/${id}`, data, {
+            axios.put(`https://mern-mhs-api-badruti94.vercel.app/mhs/${id}`, data, {
                 headers: {
                     'content-type': 'multipart/form-data'
                 }
@@ -48,7 +48,7 @@ const Form = ({ update, setIsTambah, setIsUpdate, id, getData, ...rest }) => {
     useEffect(()=>{
         if(update){
             console.log(id);
-            axios.get(`http://localhost:4000/mhs/${id}`)
+            axios.get(`https://mern-mhs-api-badruti94.vercel.app/mhs/${id}`)
             .then(data => {
                 const mhs = data.data
                 console.log(mhs);
